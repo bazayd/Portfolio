@@ -1,0 +1,127 @@
+/* Variables */
+/* Mixins */
+html, body {
+  width: 100%;
+  font-family: "Bricolage Grotesque", sans-serif;
+  background: #C9F2C7;
+}
+
+.wrapper {
+  margin: 150px 150px;
+}
+.wrapper h1 {
+  margin: 40px 50px;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #243119;
+  text-transform: uppercase;
+}
+.wrapper img {
+  border-style: none;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 50px 60px;
+  /* Override the previous radius for images defined in logo mixus*/
+  border-radius: 10px;
+  margin: 40px 60px;
+}
+.wrapper .animate {
+  background-image: linear-gradient(-225deg, #629460 0%, #96BE8C 29%, #ACECA1 67%, #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 90px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.socialsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Images and animation inheritance for socials wrapper */
+}
+.socialsWrapper img {
+  border-style: none;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  margin: 50px 60px;
+}
+.socialsWrapper .one {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: 0.5s;
+}
+.socialsWrapper .one:hover {
+  cursor: pointer;
+  color: #243119;
+  box-shadow: 0 0 12px #243119;
+  text-shadow: 0 0 12px #243119;
+}
+.socialsWrapper .one:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+.socialsWrapper .two {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: 0.5s;
+}
+.socialsWrapper .two:hover {
+  cursor: pointer;
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+.socialsWrapper .two:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+.socialsWrapper .three {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: 0.5s;
+}
+.socialsWrapper .three:hover {
+  cursor: pointer;
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+.socialsWrapper .three:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}/*# sourceMappingURL=styles.css.map */

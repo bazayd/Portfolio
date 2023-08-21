@@ -1,0 +1,155 @@
+/* Variables */
+$font-frame: 'Bricolage Grotesque', sans-serif;
+$background-pallete: #C9F2C7;
+$shadow-color: #243119;
+
+
+/* Mixins */
+@mixin logo() {
+    border-style: none;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: 50px 60px;
+}
+
+html, body {
+    width: 100%;
+    font-family: $font-frame;
+    background: $background-pallete;
+}
+
+
+.wrapper {
+    margin: 150px 150px;
+
+    h1 {
+        margin: 40px 50px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $shadow-color;text-transform: uppercase;
+    }
+
+    img {
+        @include logo();
+        /* Override the previous radius for images defined in logo mixus*/
+        border-radius: 10px;
+        margin: 40px 60px;
+    }
+
+    .animate {
+        background-image: linear-gradient(
+            -225deg,
+            #629460 0%,
+            #96BE8C 29%,
+            #ACECA1 67%,
+            #fff800 100%
+          );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+
+        font-size: 90px;
+    }
+
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+}
+
+.socialsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Images and animation inheritance for socials wrapper */
+    img {
+        @include logo();
+    }
+
+    .one {
+        position: relative; 
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 63px;
+        background: #333;
+        border-radius: 50%;
+        font-size: 30px;
+        color: #666;
+        transition: .5s;
+    }
+
+    .one:hover {
+        cursor: pointer;
+        color: $shadow-color;
+        box-shadow: 0 0 12px $shadow-color;
+        text-shadow: 0 0 12px $shadow-color;
+    }
+
+    .one:hover::before {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #ffee10;
+    }
+
+    .two {
+        position: relative; 
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 63px;
+        background: #333;
+        border-radius: 50%;
+        font-size: 30px;
+        color: #666;
+        transition: .5s;
+
+    }
+
+    .two:hover {
+        cursor: pointer;
+        color: #ffee10;
+        box-shadow: 0 0 5px #ffee10;
+        text-shadow: 0 0 5px #ffee10;
+    }
+
+    .two:hover::before {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #ffee10;
+    }
+
+    .three {
+        position: relative; 
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 63px;
+        background: #333;
+        border-radius: 50%;
+        font-size: 30px;
+        color: #666;
+        transition: .5s;
+    }
+
+    .three:hover {
+        cursor: pointer;
+        color: #ffee10;
+        box-shadow: 0 0 5px #ffee10;
+        text-shadow: 0 0 5px #ffee10;
+    }
+
+    .three:hover::before {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #ffee10;
+    }
+}
+
